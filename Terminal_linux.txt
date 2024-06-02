@@ -1,0 +1,976 @@
+andrey@andrey-Linux:~$ sudo su
+
+[sudo] пароль для andrey: 
+
+root@andrey-Linux:/home/andrey# apt update
+
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease                                                                                                                  
+
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease                                                                                                                
+
+Сущ:4 http://ru.archive.ubuntu.com/ubuntu jammy-proposed InRelease                                                                                                                                        
+
+Сущ:5 https://download.docker.com/linux/ubuntu jammy InRelease                                                                                                                                            
+
+Сущ:6 http://archive.ubuntu.com/ubuntu jammy InRelease                                                                                                                                   
+
+Сущ:7 http://security.ubuntu.com/ubuntu jammy-security InRelease                                       
+
+Чтение списков пакетов… Готово            
+
+Построение дерева зависимостей… Готово
+
+Чтение информации о состоянии… Готово         
+
+Все пакеты имеют последние версии.
+
+W: Цель Packages (stable/binary-amd64/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Packages (stable/binary-all/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-ru_RU) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-ru) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-en) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11 (stable/dep11/Components-amd64.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11 (stable/dep11/Components-all.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons-small (stable/dep11/icons-48x48.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons (stable/dep11/icons-64x64.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель CNF (stable/cnf/Commands-amd64) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель CNF (stable/cnf/Commands-all) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Пропускается получение настроенного файла «stable/source/Sources», так как репозиторий «https://download.docker.com/linux/ubuntu jammy InRelease» его не предоставляет (возможно, репозиторий указан с ошибкой в sources.list?)
+
+N: Пропускается получение настроенного файла «stable/binary-i386/Packages», так как репозиторий «https://download.docker.com/linux/ubuntu jammy InRelease» не поддерживает архитектуру «i386»
+
+W: Цель Packages (stable/binary-amd64/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Packages (stable/binary-all/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-ru_RU) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-ru) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-en) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11 (stable/dep11/Components-amd64.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11 (stable/dep11/Components-all.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons-small (stable/dep11/icons-48x48.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons (stable/dep11/icons-64x64.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель CNF (stable/cnf/Commands-amd64) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель CNF (stable/cnf/Commands-all) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+root@andrey-Linux:/home/andrey# echo -e "Dogs\Cats\Hamsters" > Pets
+
+root@andrey-Linux:/home/andrey# echo -e "Horses\Camels\Donkeys" > Pack_Animals
+
+root@andrey-Linux:/home/andrey# cat Pets Pack_Animals > Animals
+
+root@andrey-Linux:/home/andrey# cat Animals
+
+Dogs\Cats\Hamsters
+
+Horses\Camels\Donkeys
+
+root@andrey-Linux:/home/andrey# mv Animals Human_Friends
+
+root@andrey-Linux:/home/andrey# mkdir Animal_Shelter
+
+root@andrey-Linux:/home/andrey# mv Human_Friends Animal_Shelter/
+
+root@andrey-Linux:/home/andrey# apt install wget
+
+Чтение списков пакетов… Готово
+
+Построение дерева зависимостей… Готово
+
+Чтение информации о состоянии… Готово         
+
+Уже установлен пакет wget самой новой версии (1.21.2-2ubuntu1).
+
+wget помечен как установленный вручную.
+
+Следующие пакеты устанавливались автоматически и больше не требуются:
+
+  linux-headers-6.5.0-27-generic linux-hwe-6.5-headers-6.5.0-27 linux-image-6.5.0-27-generic linux-modules-6.5.0-27-generic linux-modules-extra-6.5.0-27-generic ubuntu-fan
+
+Для их удаления используйте «sudo apt autoremove».
+
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 0 пакетов не обновлено.
+
+root@andrey-Linux:/home/andrey# wget https://dev.mysql.com/get/mysql-apt-config_0.8.17-1_all.deb
+
+--2024-06-02 10:22:04--  https://dev.mysql.com/get/mysql-apt-config_0.8.17-1_all.deb
+
+Распознаётся dev.mysql.com (dev.mysql.com)… 104.87.162.217, 2a02:2d8:3:9a5::2e31, 2a02:2d8:3:9a9::2e31
+
+Подключение к dev.mysql.com (dev.mysql.com)|104.87.162.217|:443... соединение установлено.
+
+HTTP-запрос отправлен. Ожидание ответа… 302 Moved Temporarily
+
+Адрес: https://repo.mysql.com//mysql-apt-config_0.8.17-1_all.deb [переход]
+
+--2024-06-02 10:22:05--  https://repo.mysql.com//mysql-apt-config_0.8.17-1_all.deb
+
+Распознаётся repo.mysql.com (repo.mysql.com)… 104.81.113.179, 2a02:26f0:d200:888::1d68, 2a02:26f0:d200:889::1d68
+
+Подключение к repo.mysql.com (repo.mysql.com)|104.81.113.179|:443... соединение установлено.
+
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+
+Длина: 35592 (35K) [application/x-debian-package]
+
+Сохранение в: ‘mysql-apt-config_0.8.17-1_all.deb’
+
+
+
+mysql-apt-config_0.8.17-1_all.deb                  100%[===============================================================================================================>]  34,76K  --.-KB/s    за 0,02s   
+
+
+
+2024-06-02 10:22:05 (1,43 MB/s) - ‘mysql-apt-config_0.8.17-1_all.deb’ сохранён [35592/35592]
+
+
+
+root@andrey-Linux:/home/andrey# dpkg -i mysql-apt-config_0.8.17-1_all.deb
+
+Выбор ранее не выбранного пакета mysql-apt-config.
+
+(Чтение базы данных … на данный момент установлен 237461 файл и каталог.)
+
+Подготовка к распаковке mysql-apt-config_0.8.17-1_all.deb …
+
+Распаковывается mysql-apt-config (0.8.17-1) …
+
+Настраивается пакет mysql-apt-config (0.8.17-1) …
+
+Warning: apt-key should not be used in scripts (called from postinst maintainerscript of the package mysql-apt-config)
+
+Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+
+OK
+
+root@andrey-Linux:/home/andrey# apt update
+
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease                                                                                                                                         
+
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease                                                                                                                                       
+
+Пол:4 http://repo.mysql.com/apt/ubuntu jammy InRelease [25,1 kB]                                                                                                                                          
+
+Сущ:5 http://ru.archive.ubuntu.com/ubuntu jammy-proposed InRelease                                                                                                                                        
+
+Сущ:6 https://download.docker.com/linux/ubuntu jammy InRelease                                                                                                                                            
+
+Сущ:7 http://archive.ubuntu.com/ubuntu jammy InRelease                                                                                         
+
+Сущ:8 http://security.ubuntu.com/ubuntu jammy-security InRelease                                       
+
+Ошб:4 http://repo.mysql.com/apt/ubuntu jammy InRelease         
+
+  Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+
+Чтение списков пакетов… Готово
+
+W: Ошибка GPG: http://repo.mysql.com/apt/ubuntu jammy InRelease: Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+
+E: Репозиторий «http://repo.mysql.com/apt/ubuntu jammy InRelease» не подписан.
+
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+
+W: Цель Packages (stable/binary-amd64/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Packages (stable/binary-all/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-ru_RU) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-ru) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-en) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11 (stable/dep11/Components-amd64.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11 (stable/dep11/Components-all.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons-small (stable/dep11/icons-48x48.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons (stable/dep11/icons-64x64.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель CNF (stable/cnf/Commands-amd64) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель CNF (stable/cnf/Commands-all) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Пропускается получение настроенного файла «stable/source/Sources», так как репозиторий «https://download.docker.com/linux/ubuntu jammy InRelease» его не предоставляет (возможно, репозиторий указан с ошибкой в sources.list?)
+
+N: Пропускается получение настроенного файла «stable/binary-i386/Packages», так как репозиторий «https://download.docker.com/linux/ubuntu jammy InRelease» не поддерживает архитектуру «i386»
+
+W: Цель Packages (stable/binary-amd64/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Packages (stable/binary-all/Packages) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-ru_RU) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-ru) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель Translations (stable/i18n/Translation-en) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11 (stable/dep11/Components-amd64.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11 (stable/dep11/Components-all.yml) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons-small (stable/dep11/icons-48x48.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons (stable/dep11/icons-64x64.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель CNF (stable/cnf/Commands-amd64) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+W: Цель CNF (stable/cnf/Commands-all) настроена несколько раз: в /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list:1 и в /etc/apt/sources.list.d/docker.list:1
+
+root@andrey-Linux:/home/andrey# apt install mysql-server
+
+Чтение списков пакетов… Готово
+
+Построение дерева зависимостей… Готово
+
+Чтение информации о состоянии… Готово         
+
+Следующие пакеты устанавливались автоматически и больше не требуются:
+
+  linux-headers-6.5.0-27-generic linux-hwe-6.5-headers-6.5.0-27 linux-image-6.5.0-27-generic linux-modules-6.5.0-27-generic linux-modules-extra-6.5.0-27-generic ubuntu-fan
+
+Для их удаления используйте «sudo apt autoremove».
+
+Следующие НОВЫЕ пакеты будут установлены:
+
+  mysql-server
+
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 0 пакетов не обновлено.
+
+Необходимо скачать 9 460 B архивов.
+
+После данной операции объём занятого дискового пространства возрастёт на 35,8 kB.
+
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server all 8.0.36-0ubuntu0.22.04.1 [9 460 B]
+
+Получено 9 460 B за 0с (199 kB/s)           
+
+Выбор ранее не выбранного пакета mysql-server.
+
+(Чтение базы данных … на данный момент установлено 237466 файлов и каталогов.)
+
+Подготовка к распаковке …/mysql-server_8.0.36-0ubuntu0.22.04.1_all.deb …
+
+Распаковывается mysql-server (8.0.36-0ubuntu0.22.04.1) …
+
+Настраивается пакет mysql-server (8.0.36-0ubuntu0.22.04.1) …
+
+root@andrey-Linux:/home/andrey# wget https://example.com/sample-package.deb
+
+--2024-06-02 10:24:20--  https://example.com/sample-package.deb
+
+Распознаётся example.com (example.com)… 93.184.215.14, 2606:2800:21f:cb07:6820:80da:af6b:8b2c
+
+Подключение к example.com (example.com)|93.184.215.14|:443... соединение установлено.
+
+HTTP-запрос отправлен. Ожидание ответа… 500 Internal Server Error
+
+2024-06-02 10:24:21 ОШИБКА 500: Internal Server Error.
+
+
+
+root@andrey-Linux:/home/andrey# dpkg -i sample-package.deb
+
+dpkg: ошибка: нет доступа к архиву «sample-package.deb»: Нет такого файла или каталога
+
+root@andrey-Linux:/home/andrey# history > history.txt
+
+root@andrey-Linux:/home/andrey# cat history.txt
+
+    1  exit
+
+    2  iptables -L -nv
+
+    3  apt install nginx
+
+    4  ss -ntlp
+
+    5  ps afx
+
+    6  curl localhost
+
+    7  apt install curl
+
+    8  curl localhost
+
+    9  cd /etc/nginx
+
+   10  ll
+
+   11  nano nginx.conf
+
+   12  nginx -t
+
+   13  ll
+
+   14  apt install apache2
+
+   15  cd..
+
+   16  cd ..
+
+   17  ps afx
+
+   18  cd /etc/apache2
+
+   19  ll
+
+   20  nano ports.conf
+
+   21  ps afx
+
+   22  apachectl -t
+
+   23  systemctl start apache2
+
+   24  systemctl status apache2
+
+   25  ps afx
+
+   26  ss -ntlp
+
+   27  cd sites-enabled/
+
+   28  ll
+
+   29  nano 000-default.conf
+
+   30  systemctl reload apache2
+
+   31  curl localhost 8080
+
+   32  cd ..
+
+   33  cd /etc/nginx
+
+   34  ll
+
+   35  cd sites-enabled/
+
+   36  nano default
+
+   37  apt install libapache2-mod-php8.1 php8.1
+
+   38  cd ..
+
+   39  cat php8.1
+
+   40  apt install php8.1-fpm
+
+   41  ps afx
+
+   42  cd /etc/php
+
+   43  ll
+
+   44  cd 8.1
+
+   45  ll
+
+   46  cd /home
+
+   47  cd ..
+
+   48  apt install mysql-server-8.0
+
+   49  apt update
+
+   50  apt list --upgradable
+
+   51  apt install python3-update-managerupdate-manager-core update-manager
+
+   52  apt install python3-update-manager update-manager-core update-manager
+
+   53  mysql
+
+   54  use gb
+
+   55  apt update
+
+   56  apt list --upgradable
+
+   57  apt install libapache2-mod-php8.1 php8.1-cli php8.1-common php8.1-fpm php8.1-opcache php8.1-readline php8.1
+
+   58  nano nginx.conf
+
+   59  cd /etc/nginx
+
+   60  ll
+
+   61  nano nginx.conf
+
+   62  cd /etc/apache2
+
+   63  ll
+
+   64  nano apache2.conf
+
+   65  nano ports.conf
+
+   66  cd sites-avalible
+
+   67  nano sites-availible/000-default.conf
+
+   68  nano sites-available/000-default.conf
+
+   69  systemctl ss -ntlp
+
+   70  ss -ntlp
+
+   71  systemctl reload nginx
+
+   72  systemctl start nginx
+
+   73  systemctl status nginx
+
+   74  cd ..
+
+   75  cd /etc/nginx
+
+   76  ll
+
+   77  nano nginx.conf
+
+   78  nginx -t
+
+   79  nano sites-enabled/000-default.conf
+
+   80  cd sites-enabled
+
+   81  ll
+
+   82  nano sites-enabled/
+
+   83  nano default
+
+   84  nginx -t
+
+   85  nano default
+
+   86  nginx -t
+
+   87  nano default
+
+   88  nginx -t
+
+   89  nano default
+
+   90  nginx -t
+
+   91  nano default
+
+   92  nginx -t
+
+   93  nano default
+
+   94  nginx -t
+
+   95  nano default
+
+   96  nginx -t
+
+   97  systemctl start nginx
+
+   98  ss -ntlp
+
+   99  nano nginx.conf
+
+  100  cd ..
+
+  101  ll
+
+  102  nano nginx.conf
+
+  103  cd /etc/nginx/sites-available
+
+  104  ll
+
+  105  nano default
+
+  106  apt update
+
+  107  cd /etc/nginx/sites-available
+
+  108  nano default
+
+  109  nginx -t
+
+  110  nano default
+
+  111  nginx -t
+
+  112  systemctl reload nginx
+
+  113  systemctl start nginx
+
+  114  systemctl start apache2
+
+  115  ss -ntlp
+
+  116  apt install libapache2-mod-php8.1 php8.1 -y
+
+  117  cd /etc/apache2/mods-enabled/
+
+  118  apt install php8.1-fpm
+
+  119  cd /var/www/html
+
+  120  ll
+
+  121  nano info.php
+
+  122  systemctl reload apache2
+
+  123  cd /etc/nginx/sites-available
+
+  124  nano default
+
+  125  nginx -t
+
+  126  systemctl reload nginx
+
+  127  ss -ntlp
+
+  128  systemctl status mysql
+
+  129  apt install php-mbstring -y
+
+  130  apt install phpmyadmin -y
+
+  131  apt install docker.io -y
+
+  132  docker ps -a
+
+  133  docker run hello-world
+
+  134  docker ps -a
+
+  135  docker images
+
+  136  docker run -d -p 80:80 docker/getting-started
+
+  137  docker ps
+
+  138  docker ps -a
+
+  139  docker run -d -p 80:80 docker/getting-started
+
+  140  docker ps -a
+
+  141  systemctl reload docker
+
+  142  docker run -d -p 80:80 docker/getting-started
+
+  143  docker ps -a
+
+  144  systemctl stop nginx
+
+  145  docker run -d -p 80:80 docker/getting-started
+
+  146  docker ps -a
+
+  147  docker stop bfc789c4248d
+
+  148  docker ps -a
+
+  149  docker pull nginx
+
+  150  docker run -d  nginx
+
+  151  docker ps -a
+
+  152  docker stop e90644af597f
+
+  153  docker run -d -p 8123:80  nginx
+
+  154  docker ps -a
+
+  155  docker exec it optimistic_keldysh /bin/bash
+
+  156  docker ps
+
+  157  docker exec -it optimistic_keldysh /bin/bash
+
+  158  docker stop 75c7729f564e
+
+  159  cd homework/
+
+  160  nano Dockerfile
+
+  161  cat Dockerfile
+
+  162  apt update
+
+  163  apt install apt-transport-https ca-certificates curl software-properties-common -y
+
+  164  apt install curl
+
+  165  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+  166  add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+  167  apt update
+
+  168  apt install docker -y
+
+  169  docker run -d ubuntu
+
+  170  cd homework
+
+  171  ll
+
+  172  nano Dockerfile
+
+  173  cat Dockerfile
+
+  174  nano Dockerfile
+
+  175  cat Dockerfile
+
+  176  docker build -t php_fpm .
+
+  177  docker images
+
+  178  cd homework
+
+  179  cat > andrey.sh
+
+  180  nano andrey.sh
+
+  181  bash andrey.sh
+
+  182  andrey.sh.
+
+  183  ..
+
+  184  cd ..
+
+  185  ps aux
+
+  186  apt update
+
+  187  apt upgrade
+
+  188  apt-get install lxc debootstrap bridge-utils lxc-templates
+
+  189  apt-get install lxd-installer
+
+  190  lxd init
+
+  191  lxc storage list
+
+  192  apt update
+
+  193  lxc-create -n test123 -t ubuntu
+
+  194  lxc-start -n test123
+
+  195  lxc-attach -n test123
+
+  196  lxc-stop -n test123
+
+  197  nano /var/lib/lxc/test123/config
+
+  198  lxc-start -n test123
+
+  199  lxc-attach -n test123
+
+  200  lxc-create --name=con1 --template=ubuntu
+
+  201  lxc-create -n con2 -t ubuntu --logfile=HomeWork02/con2.log
+
+  202  lxc-start con2 --logfile=HomeWork02/con2.log --logpriority=NOTICE
+
+  203  lxc-start con1 --logfile=HomeWork02/con1.log --logpriority=NOTICE
+
+  204  cat /var/lib/lxc/con1/rootfs/etc/netplan/10-lxc.yaml 
+
+  205  cat /etc/netplan/00-installer-config.yaml 
+
+  206  nano /var/lib/lxc/ubuntu/config
+
+  207  docker --version
+
+  208  docker run docker/whalesay cowsay Hello, Docker!
+
+  209  docker run
+
+  210  docker run --help
+
+  211  docker run -it -h GB --name gb-test ubuntu:22.10
+
+  212  docker run -d -h GB --name gb-test ubuntu:22.10
+
+  213  docker --version
+
+  214  apt update
+
+  215  docker start
+
+  216  docker ps
+
+  217  docker stop
+
+  218  docker star
+
+  219  docker restart
+
+  220  sudo docker restart
+
+  221  sudo docker start
+
+  222  systemctl status docker
+
+  223  systemctl start docker
+
+  224  systemctl status docker
+
+  225  sudo usermod -aG docker $USER
+
+  226  sudo systemctl restart docker
+
+  227  sudo journalctl -u docker
+
+  228  docker run docker/whalesay cowsay Hello, Docker!
+
+  229  docker run -it -h GB --name gb-test ubuntu:22.10
+
+  230  docker images
+
+  231  doker ps -a
+
+  232  docker ps -a
+
+  233  docker rm keen_lovelace optimistic_keldysh hopeful_gagarin awesome_yonath romantic_nightingale great_ride friendly_elgamal nervous_murdock
+
+  234  docker ps -a
+
+  235  doker stop
+
+  236  docker stop
+
+  237  systemctl stop docker
+
+  238  docker
+
+  239  docker exec -it gb-test /bin/bash
+
+  240  docker ps -a
+
+  241  systemctl status docker
+
+  242  docker ps -a
+
+  243  docker start gb-test
+
+  244  docker exec -it gb-test /bin/bash
+
+  245  docker ps -a
+
+  246  docker rm c43b9d5b264f --force
+
+  247  docker ps -a
+
+  248  mkdir /test
+
+  249  mkdir /test/folder
+
+  250  docker run -it -h GB --name gb-test -v /test/folder:/otherway ubuntu:22.10
+
+  251  docker ps -a
+
+  252  docker ps
+
+  253  docker start c4c1d0fd4467
+
+  254  docker ps
+
+  255  apt update
+
+  256  apt upgrade
+
+  257  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+  258  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+  259  echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+  260  apt update
+
+  261  apt install docker-ce
+
+  262  usermod -aG docker $USER
+
+  263  newgrp docker
+
+  264  apt update
+
+  265  ls
+
+  266  mkdir seminar4
+
+  267  cd seminar4/
+
+  268  touch app.py
+
+  269  micro app.py
+
+  270  nano app.py
+
+  271  cat app.py
+
+  272  touch Dockerfile
+
+  273  nano Dockerfile
+
+  274  docker build -t my-docker-image .
+
+  275  docker run -it my-docker-image
+
+  276  nano app.py
+
+  277  docker run -it my-docker-image
+
+  278  nano app.py
+
+  279  docker run -it my-docker-image
+
+  280  nano app.py
+
+  281  cat app.py
+
+  282  nano app.py
+
+  283  docker run -it my-docker-image
+
+  284  nano app.py
+
+  285  docker run -it my-docker-image
+
+  286  docker build -t my-docker-image .
+
+  287  docker run -it my-docker-image
+
+  288  nano app.py
+
+  289  docker build -t my-docker-image .
+
+  290  docker run -it my-docker-image
+
+  291  docker ps -a
+
+  292  doker rm 625fda523925 6bb0303b0531 84ec2c5026c8 432679e946b1 eee005cc3e53 2f700dcc5176 e7f24febbf96 c4c1d0fd4467
+
+  293  docker rm 625fda523925 6bb0303b0531 84ec2c5026c8 432679e946b1 eee005cc3e53 2f700dcc5176 e7f24febbf96 c4c1d0fd4467 --force
+
+  294  docker ps -a
+
+  295  docker run -d --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw mysql:8.0.31
+
+  296  docker run -d --name myphp -p 8081:80 --link some-mysql -e PMA_HOST=some-mysql phpmyadmin/phpmyadmin
+
+  297  docker ps -a
+
+  298  cd homework/
+
+  299  nano Docker-compose.yaml
+
+  300  docker ps -a
+
+  301  docker-compose up -d
+
+  302  apt  install docker-compose
+
+  303  docker-compose up -d
+
+  304  Docker-compose up -d
+
+  305  docker ps -a
+
+  306  Docker-compose.yaml up -d
+
+  307  ll
+
+  308  snap install docker
+
+  309  Docker-compose.yaml up -d
+
+  310  Docker-compose up -d
+
+  311  docker-compose up -d
+
+  312  mv Docker-compose.yaml docker-compose.yaml
+
+  313  ll
+
+  314  docker-compose up -d
+
+  315  apt update
+
+  316  echo -e "Dogs\Cats\Hamsters" > Pets
+
+  317  echo -e "Horses\Camels\Donkeys" > Pack_Animals
+
+  318  cat Pets Pack_Animals > Animals
+
+  319  cat Animals
+
+  320  mv Animals Human_Friends
+
+  321  mkdir Animal_Shelter
+
+  322  mv Human_Friends Animal_Shelter/
+
+  323  apt install wget
+
+  324  wget https://dev.mysql.com/get/mysql-apt-config_0.8.17-1_all.deb
+
+  325  dpkg -i mysql-apt-config_0.8.17-1_all.deb
+
+  326  apt update
+
+  327  apt install mysql-server
+
+  328  wget https://example.com/sample-package.deb
+
+  329  dpkg -i sample-package.deb
+
+  330  history > history.txt
+
+root@andrey-Linux:/home/andrey# 
+
