@@ -1,0 +1,312 @@
+root@andrey-Linux:/home/andrey# sudo mysql -u root -p
+
+Enter password: 
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+
+Your MySQL connection id is 8
+
+Server version: 8.0.36-0ubuntu0.22.04.1 (Ubuntu)
+
+
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+
+affiliates. Other names may be trademarks of their respective
+
+owners.
+
+
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+
+
+mysql> -- Создать базу данных
+
+mysql> CREATE DATABASE Human_Friends;
+
+Query OK, 1 row affected (0,02 sec)
+
+
+
+mysql> USE Human_Friends;
+
+Database changed
+
+mysql> 
+
+mysql> -- Создать таблицы
+
+mysql> CREATE TABLE Pets (
+
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+
+    ->     name VARCHAR(255),
+
+    ->     type VARCHAR(50),
+
+    ->     commands TEXT,
+
+    ->     birth_date DATE
+
+    -> );
+
+Query OK, 0 rows affected (0,06 sec)
+
+
+
+mysql> 
+
+mysql> CREATE TABLE Pack_Animals (
+
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+
+    ->     name VARCHAR(255),
+
+    ->     type VARCHAR(50),
+
+    ->     commands TEXT,
+
+    ->     birth_date DATE
+
+    -> );
+
+Query OK, 0 rows affected (0,03 sec)
+
+
+
+mysql> 
+
+mysql> -- Заполнить таблицы данными
+
+mysql> INSERT INTO Pets (name, type, commands, birth_date) VALUES
+
+    -> ('Bobby', 'Dogs', 'sit, lie down', '2021-01-10'),
+
+    -> ('Murka', 'Cats', 'meow', '2020-05-15'),
+
+    -> ('Snowy', 'Hamsters', 'run', '2022-03-20');
+
+Query OK, 3 rows affected (0,02 sec)
+
+Records: 3  Duplicates: 0  Warnings: 0
+
+
+
+mysql> 
+
+mysql> INSERT INTO Pack_Animals (name, type, commands, birth_date) VALUES
+
+    -> ('Bucephalus', 'Horses', 'gallop', '2019-02-25'),
+
+    -> ('Camel', 'Camels', 'carry load', '2018-11-11'),
+
+    -> ('Eeyore', 'Donkeys', 'carry load', '2021-06-05');
+
+Query OK, 3 rows affected (0,01 sec)
+
+Records: 3  Duplicates: 0  Warnings: 0
+
+
+
+mysql> 
+
+mysql> -- Удалить верблюдов из таблицы Pack_Animals
+
+mysql> DELETE FROM Pack_Animals WHERE type = 'Camels';
+
+Query OK, 1 row affected (0,01 sec)
+
+
+
+mysql> 
+
+mysql> -- Объединить таблицы лошадей и ослов в одну таблицу
+
+mysql> CREATE TABLE Horses_And_Donkeys AS
+
+    -> SELECT * FROM Pack_Animals WHERE type IN ('Horses', 'Donkeys');
+
+Query OK, 2 rows affected (0,04 sec)
+
+Records: 2  Duplicates: 0  Warnings: 0
+
+
+
+mysql> 
+
+mysql> -- Создать новую таблицу для молодых животных
+
+mysql> CREATE TABLE Young_Animals AS
+
+    -> SELECT *, TIMESTAMPDIFF(MONTH, birth_date, CURDATE()) AS age_in_months
+
+    -> FROM (
+
+    ->     SELECT name, type, commands, birth_date
+
+    ->     FROM Pets
+
+    ->     UNION ALL
+
+    ->     SELECT name, type, commands, birth_date
+
+    ->     FROM Pack_Animals
+
+    -> ) AS combined
+
+    -> WHERE birth_date > DATE_SUB(CURDATE(), INTERVAL 3 YEAR)
+
+    -> AND birth_date <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR);
+
+Query OK, 2 rows affected (0,03 sec)
+
+Records: 2  Duplicates: 0  Warnings: 0
+
+
+
+mysql> 
+
+mysql> -- Объединить все таблицы в одну
+
+mysql> CREATE TABLE All_Animals AS
+
+    -> SELECT *, 'Pets' AS previous_table FROM Pets
+
+    -> UNION ALL
+
+    -> SELECT *, 'Pack_Animals' AS previous_table FROM Pack_Animals;
+
+Query OK, 5 rows affected (0,09 sec)
+
+Records: 5  Duplicates: 0  Warnings: 0
+
+
+
+mysql> -- Вывести таблицу Pets
+
+mysql> SELECT * FROM Pets;
+
++----+-------+----------+---------------+------------+
+
+| id | name  | type     | commands      | birth_date |
+
++----+-------+----------+---------------+------------+
+
+|  1 | Bobby | Dogs     | sit, lie down | 2021-01-10 |
+
+|  2 | Murka | Cats     | meow          | 2020-05-15 |
+
+|  3 | Snowy | Hamsters | run           | 2022-03-20 |
+
++----+-------+----------+---------------+------------+
+
+3 rows in set (0,00 sec)
+
+
+
+mysql> 
+
+mysql> -- Вывести таблицу Pack_Animals
+
+mysql> SELECT * FROM Pack_Animals;
+
++----+------------+---------+------------+------------+
+
+| id | name       | type    | commands   | birth_date |
+
++----+------------+---------+------------+------------+
+
+|  1 | Bucephalus | Horses  | gallop     | 2019-02-25 |
+
+|  3 | Eeyore     | Donkeys | carry load | 2021-06-05 |
+
++----+------------+---------+------------+------------+
+
+2 rows in set (0,00 sec)
+
+
+
+mysql> 
+
+mysql> -- Вывести таблицу Horses_And_Donkeys
+
+mysql> SELECT * FROM Horses_And_Donkeys;
+
++----+------------+---------+------------+------------+
+
+| id | name       | type    | commands   | birth_date |
+
++----+------------+---------+------------+------------+
+
+|  1 | Bucephalus | Horses  | gallop     | 2019-02-25 |
+
+|  3 | Eeyore     | Donkeys | carry load | 2021-06-05 |
+
++----+------------+---------+------------+------------+
+
+2 rows in set (0,00 sec)
+
+
+
+mysql> 
+
+mysql> -- Вывести таблицу Young_Animals
+
+mysql> SELECT * FROM Young_Animals;
+
++--------+----------+------------+------------+---------------+
+
+| name   | type     | commands   | birth_date | age_in_months |
+
++--------+----------+------------+------------+---------------+
+
+| Snowy  | Hamsters | run        | 2022-03-20 |            26 |
+
+| Eeyore | Donkeys  | carry load | 2021-06-05 |            35 |
+
++--------+----------+------------+------------+---------------+
+
+2 rows in set (0,00 sec)
+
+
+
+mysql> 
+
+mysql> -- Вывести таблицу All_Animals
+
+mysql> SELECT * FROM All_Animals;
+
++----+------------+----------+---------------+------------+----------------+
+
+| id | name       | type     | commands      | birth_date | previous_table |
+
++----+------------+----------+---------------+------------+----------------+
+
+|  1 | Bobby      | Dogs     | sit, lie down | 2021-01-10 | Pets           |
+
+|  2 | Murka      | Cats     | meow          | 2020-05-15 | Pets           |
+
+|  3 | Snowy      | Hamsters | run           | 2022-03-20 | Pets           |
+
+|  1 | Bucephalus | Horses   | gallop        | 2019-02-25 | Pack_Animals   |
+
+|  3 | Eeyore     | Donkeys  | carry load    | 2021-06-05 | Pack_Animals   |
+
++----+------------+----------+---------------+------------+----------------+
+
+5 rows in set (0,00 sec)
+
+
+
+mysql> exit
+
+Bye
+
+root@andrey-Linux:/home/andrey# 
+
