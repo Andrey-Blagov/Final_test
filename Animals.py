@@ -75,7 +75,7 @@ def main():
 
         if choice == '1':
             name = input("Введите имя животного: ")
-            birth_date = input("Введите дату рождения животного (YYYY-MM-DD): ")
+            birth_date = input("Введите дату рождения животного (DD-MM-YYYY): ")
             animal_type = input("Домашнее или Вьючное: ").strip().lower()
             
             if animal_type == "домашнее":
@@ -88,7 +88,7 @@ def main():
                 print("Неправильный тип животного.")
         
         elif choice == '2':
-            name = input("Enter the animal's name: ")
+            name = input("Введите имя животного: ")
             registry.list_commands(name)
 
         elif choice == '3':
@@ -107,3 +107,37 @@ if __name__ == "__main__":
 
 
 
+class CounterException(Exception):
+    pass
+
+
+class Counter:
+    def __init__(self):
+        self.count = 0
+        self.closed = False
+
+    def add(self):
+        if self.closed:
+            raise CounterException("Счетчик закрыт!")
+        self.count += 1
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.closed = True
+        if exc_type:
+            raise
+
+    def __del__(self):
+        if not self.closed:
+            raise CounterException("Ресурс не был закрыт!")
+
+
+try:
+    with Counter() as counter:
+        # Если добавлено новое животное и все поля заполнены
+        counter.add()
+        print(f"Текущее значение счетчика: {counter.count}")
+except CounterException as e:
+    print(e)
